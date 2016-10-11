@@ -69,7 +69,7 @@ RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php')
     php -r "unlink('/tmp/composer-setup.php');" && \
     php composer.phar global require "hirak/prestissimo:^0.3"
 
-RUN wget https://github.com/cachethq/Cachet/archive/${cachet_ver}.tar.gz && \
+RUN wget https://github.com/PrimeRevenue/Cachet/archive/${cachet_ver}.tar.gz && \
     tar xzvf ${cachet_ver}.tar.gz --strip-components=1 && \
     chown -R www-data /var/www/html && \
     rm -r ${cachet_ver}.tar.gz && \
